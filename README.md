@@ -1,10 +1,10 @@
-# About Check
+# C Unit Tests
 
 [![Travis Build Status](https://travis-ci.org/libcheck/check.svg?branch=master)](https://travis-ci.org/libcheck/check)
 [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/github/libcheck/check?svg=true)](https://ci.appveyor.com/project/libcheck/check/branch/master)
 
 
-Check is a unit testing framework for C. It features a simple interface
+C Unit Tests is a unit testing framework for C. It features a simple interface
 for defining unit tests, putting little in the way of the
 developer. Tests are run in a separate address space, so Check can
 catch both assertion failures and code errors that cause segmentation
@@ -16,7 +16,7 @@ tutorial.  The tutorial is also available as `info check`.
 
 # Installation
 
-Check has the following dependencies:
+C Unit Tests has the following dependencies:
 
 * [automake](https://www.gnu.org/software/automake/)-1.9.6 (1.11.3 on OS X if you are using /usr/bin/ar)
 * [autoconf](https://www.gnu.org/software/autoconf/)-2.59
@@ -33,7 +33,7 @@ The versions specified may be higher than those actually needed.
     $ autoreconf --install
     $ ./configure
     $ make
-    $ make check
+    $ make c-unit-tests
     $ make install
 
 in this directory to set everything up.  autoreconf calls all of the
@@ -50,9 +50,9 @@ necessary.
     $ make
     $ CTEST_OUTPUT_ON_FAILURE=1 make test
 
-# Linking against Check
+# Linking against C Unit Tests
 
-Check uses variadic macros in check.h, and the strict C90 options for
+C Unit Tests uses variadic macros in check.h, and the strict C90 options for
 gcc will complain about this.  In gcc 4.0 and above you can turn this
 off explicitly with `-Wno-variadic-macros`.  In a future API it would be
 nice to eliminate these macros.
